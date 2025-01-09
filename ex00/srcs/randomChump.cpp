@@ -1,31 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 14:22:28 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/09 16:18:52 by mpietrza         ###   ########.fr       */
+/*   Created: 2025/01/09 16:05:34 by mpietrza          #+#    #+#             */
+/*   Updated: 2025/01/09 16:37:04 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ZOMBIE_HPP
-# define ZOMBIE_HPP
+#include "../incs/Zombie.hpp"
 
-#include <iostream>
-#include <string>
-
-class Zombie
+// This function creates a new Zombie object and calls the announce method
+void	randomChump(std::string name)
 {
-	public:
-		Zombie(std::string name);
-		~Zombie();
-		void    announce( void );
-		Zombie* newZombie( std::string name );
-		void    randomChump( std::string name );
-	private:
-		std::string _name;
-};
-
-#endif
+	Zombie z = Zombie(name);
+	z.announce();
+}
