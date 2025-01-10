@@ -1,33 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/09 15:56:21 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/10 16:25:28 by mpietrza         ###   ########.fr       */
+/*   Created: 2025/01/10 15:47:58 by mpietrza          #+#    #+#             */
+/*   Updated: 2025/01/10 17:31:37 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/Zombie.hpp"
 
-// Constructor
-Zombie::Zombie(std::string name)
+Zombie*	zombieHorde( int N, std::string name )
 {
-	this->_name = name;
-	std::cout << "Zombie object " << this->_name << " created" << std::endl;
+	Zombie*	Zombies = new Zombie[N];
+	for (int i = 0; i < N; i++)
+		Zombies[i].setName(name);
+	return (Zombies);
 }
-
-// Destructor
-Zombie::~Zombie()
-{
-	std::cout << "Zombie object " << this->_name << " destroyed" << std::endl;
-}
-
-// This function prints the zombie's name and a message
-void	Zombie::announce()
-{
-	std::cout << this->_name << " BraiiiiiiinnnzzzZ..." << std::endl;
-}
-

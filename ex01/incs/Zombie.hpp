@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 14:22:28 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/10 17:30:49 by mpietrza         ###   ########.fr       */
+/*   Created: 2025/01/10 15:08:48 by mpietrza          #+#    #+#             */
+/*   Updated: 2025/01/10 17:32:50 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,14 @@ class Zombie
 {
 	private:
 		std::string _name;
+		int			_n;
 	public:
-		Zombie(std::string name);
+		Zombie();
+		Zombie(std::string name, int n);
 		~Zombie();
 		void    announce( void );
-		Zombie* newZombie( std::string name );
-		void    randomChump( std::string name );
-
+		void	setName( std::string name );
+		Zombie*	zombieHorde( int N, std::string name );
 };
 
 #endif
