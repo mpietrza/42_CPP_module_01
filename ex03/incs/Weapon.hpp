@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 16:48:42 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/13 17:48:18 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/14 14:23:08 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ class	Weapon
 	private:
 		std::string _type;
 	public:
-		Weapon(std::string type);
+		Weapon(const std::string & type );
 		~Weapon();
-		std::string const & Weapon::getType() const;
-		void Weapon::setType(std::string type);
+		const std::string & getType() const;
+		void setType(const std::string & type);
 };
 
 #endif

@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   fileOperations.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 16:56:24 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/14 15:31:15 by mpietrza         ###   ########.fr       */
+/*   Created: 2025/01/14 15:20:24 by mpietrza          #+#    #+#             */
+/*   Updated: 2025/01/14 16:00:31 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A_HPP
-# define HUMAN_A_HPP
+#ifndef FILE_OPERATIONS_HPP
+# define FILE_OPERATIONS_HPP
 
-#include "Weapon.hpp"
 
-class	HumanA
+class fileOperations
 {
 	private:
-		std::string	_name;
-		Weapon&		_weapon;
+		std::string _filename;
+		std::string _s1;
+		std::string _s2;
+
 	public:
-		HumanA(const std::string & name, Weapon & weapon);
-		~HumanA();
-		void attack() const;
+		fileOperations();
+		~fileOperations();
+		void openAndCopy(const std::string & filename);
+		void replaceString(const std::string & s1, const std::string & s2);
 };
 
 #endif

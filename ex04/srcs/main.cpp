@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mpietrza <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 16:56:24 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/14 15:31:15 by mpietrza         ###   ########.fr       */
+/*   Created: 2025/01/14 15:22:49 by mpietrza          #+#    #+#             */
+/*   Updated: 2025/01/14 15:28:53 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_A_HPP
-# define HUMAN_A_HPP
+#include "../incs/fileOperations.hpp"
+#include <string>
+#include <iostream>
 
-#include "Weapon.hpp"
-
-class	HumanA
+int	 main(int argc, char **argv)
 {
-	private:
-		std::string	_name;
-		Weapon&		_weapon;
-	public:
-		HumanA(const std::string & name, Weapon & weapon);
-		~HumanA();
-		void attack() const;
-};
 
-#endif
+}
+
