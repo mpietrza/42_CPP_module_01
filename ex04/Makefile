@@ -6,11 +6,11 @@
 #    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/01/14 14:22:46 by mpietrza         ###   ########.fr        #
+#    Updated: 2025/01/15 14:05:37 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = unnecessaryViolence
+NAME = sedIsForLosers
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g -O0
 STD = -std=c++98
@@ -33,9 +33,7 @@ C = "\033[36m"
 W = "\033[37m"
 
 #SOURCES
-SRC		= Weapon.cpp \
-		  HumanA.cpp \
-		  HumanB.cpp \
+SRC		= fileOperations.cpp \
 		  main.cpp
 
 SRCS	= $(addprefix $(DIR_SRCS), $(SRC))
@@ -63,19 +61,19 @@ $(DIR_OBJS):
 
 $(NAME): $(OBJS) Makefile
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
-	@echo $(G)unnecessaryViolence compiled successfully! $(DEF_COLOR)
+	@echo $(G)sedIsForLosers compiled successfully! $(DEF_COLOR)
 
 clean:
 	@echo $(GRAY)
 	$(RM) $(OBJS) $(DEPS) $(DIR_OBJS)
-	@echo $(G)unnecessaryViolence object files erased successfully! $(DEF_COLOR)
+	@echo $(G)sedIsForLosers object files erased successfully! $(DEF_COLOR)
 
 fclean: clean
 	@echo $(GRAY)
 	$(RM) $(NAME)
-	@echo $(G)unnecessaryViolence executable files erased succesfully! $(DEF_COLOR)
+	@echo $(G)sedIsForLosers executable files erased succesfully! $(DEF_COLOR)
 
 re: fclean all
-	@echo $(G)Erased and recompiled every file of unnecessaryViolence successfully! $(DEF_COLOR)
+	@echo $(G)Erased and recompiled every file of sedIsForLosers successfully! $(DEF_COLOR)
 
 .PHONY: all clean fclean re
