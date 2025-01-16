@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:12:18 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/14 14:28:14 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:05:28 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,9 @@
  * type is a string that is passed as a parameter to the constructor
  * type is used to initialize the private member variable _type
  * 
- * 
  * The constructor prints a message to the console indicating that the Weapon object has been constructed
  */
-Weapon::Weapon(const std::string & type) : _type(type)
+Weapon::Weapon(const std::string &type) : _type(type)
 {
 	//std::cout << "Weapon type: " << type << " constructed." << std::endl;
 }
@@ -35,7 +34,7 @@ Weapon::~Weapon()
 }
 
 //member function that returns a const reference to type
-const std::string  & Weapon::getType() const
+const std::string &Weapon::getType() const
 {
 	return (_type);
 }

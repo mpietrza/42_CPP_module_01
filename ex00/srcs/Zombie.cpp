@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 15:56:21 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/10 16:25:28 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:59:07 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 Zombie::Zombie(std::string name)
 {
 	this->_name = name;
-	std::cout << "Zombie object " << this->_name << " created" << std::endl;
+	//std::cout << "Zombie object " << this->_name << " created" << std::endl;
 }
 
 // Destructor

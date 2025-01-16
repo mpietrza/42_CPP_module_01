@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:53:22 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/14 14:28:07 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:03:52 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
  * weapon is a reference to a Weapon object that is passed as a parameter to the constructor
  * weapon is used to initialize the private member variable _weapon
  */
-HumanA::HumanA(const std::string & name, Weapon & weapon) : _name(name), _weapon(weapon)
+HumanA::HumanA(const std::string &name, Weapon &weapon) : _name(name), _weapon(weapon)
 {
 	//std::cout << "HumanA: " << this->_name << " constructed." << std::endl;
 }

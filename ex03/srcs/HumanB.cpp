@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 17:53:22 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/14 14:27:57 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/16 16:03:43 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ HumanB::~HumanB()
 }
 
 //function to set weapon
-void HumanB::setWeapon(Weapon & weapon)
+void HumanB::setWeapon(Weapon &weapon)
 {
 	this->_weapon = &weapon;
 }
