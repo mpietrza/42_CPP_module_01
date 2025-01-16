@@ -3,25 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpietrza <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 16:04:01 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/15 16:25:36 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:52:23 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "harl.hpp"
+#include "Harl.hpp"
 
 //constructor
 Harl::Harl()
 {
-	std::cout << "Harl constructed" << std::endl;
+	//std::cout << "Harl constructed" << std::endl;
 }
 
 //destructor
 Harl::~Harl()
 {
-	std::cout << "Harl destroyed" << std::endl;
+	//std::cout << "Harl destroyed" << std::endl;
 }
 
 //function printing a 1st - 'debug' level complain
@@ -50,4 +50,18 @@ void Harl::error( void )
 
 //function taking a certain level of complain and printing it
 void Harl::complain( std::string level )
+{
+	void (Harl::*funcs[])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
+	std::string	levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+
+	for (int i = 0; i < 4; i++)
+	{
+		if (levels[i] == level)
+		{
+			(this->*funcs[i])();
+			return;
+		}
+	}
+	std::cout << "Invalid level: " << level << std::endl;
+}
 

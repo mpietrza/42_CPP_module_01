@@ -6,7 +6,7 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 15:17:55 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/15 16:03:51 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:50:44 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ class Harl
 		Harl();
 		~Harl();
 		void	complain( std::string level );
-}
+};
 
 #endif
