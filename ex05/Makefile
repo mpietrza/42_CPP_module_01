@@ -6,7 +6,7 @@
 #    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/01/15 15:17:07 by mpietrza         ###   ########.fr        #
+#    Updated: 2025/02/10 18:04:20 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ $(DIR_OBJS):
 
 
 $(NAME): $(OBJS) Makefile
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(STD) $(OBJS) -o $(NAME)
 	@echo $(G)Harl compiled successfully! $(DEF_COLOR)
 
 clean:

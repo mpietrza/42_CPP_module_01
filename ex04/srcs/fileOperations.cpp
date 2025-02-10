@@ -6,17 +6,18 @@
 /*   By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 15:49:25 by mpietrza          #+#    #+#             */
-/*   Updated: 2025/01/15 14:16:39 by mpietrza         ###   ########.fr       */
+/*   Updated: 2025/02/10 18:00:49 by mpietrza         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incs/fileOperations.hpp"
 #include <iostream>
 #include <fstream>
+#include <cstdlib>
 
 //constructor
 fileOperations::fileOperations(const std::string &filename, const std::string &s1, const std::string &s2)
-	: _filename(filename), _s1(s1), _s2(s2)
+	: _filename(filename.c_str()), _s1(s1), _s2(s2)
 {
 	//std::cout << "fileOperations constructed" << std::endl;
 }
@@ -29,7 +30,7 @@ fileOperations::~fileOperations()
 
 void	fileOperations::openAndCopy()
 {
-	std::ifstream	infile(_filename);
+	std::ifstream	infile(_filename.c_str(), std::ios_base::in);
 	if (!infile.is_open())
 	{
 		std::cerr << "Errror: infile crush" << std::endl;
@@ -45,7 +46,7 @@ void	fileOperations::openAndCopy()
 		return;
 	}
 
-	std::ofstream	outfile(_filename +".replace", std::ios_base::out);
+	std::ofstream	outfile(std::string(_filename + ".replace").c_str(), std::ios_base::out);
 	if (!outfile.is_open())
 	{
 		std::cerr << "Error: outfile crush" << std::endl;

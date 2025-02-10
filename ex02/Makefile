@@ -6,7 +6,7 @@
 #    By: mpietrza <mpietrza@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/04 17:29:38 by mpietrza          #+#    #+#              #
-#    Updated: 2025/01/10 17:43:42 by mpietrza         ###   ########.fr        #
+#    Updated: 2025/02/10 17:50:04 by mpietrza         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all:	$(DIR_OBJS) $(NAME)
 $(DIR_OBJS)%.o : %.cpp
 	@echo $(B)Compiling [$<]... $(DEF_COLOR)
 	@printf $(Y) 
-	$(CC) $(CFLAGS) -MMD -MP -c -o $@ $< 
+	$(CC) $(CFLAGS) $(STD) -MMD -MP -c -o $@ $< 
 	@echo $(DEF_COLOR)
 
 $(DIR_OBJS):
@@ -56,7 +56,7 @@ $(DIR_OBJS):
 
 
 $(NAME): $(OBJS) Makefile
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+	$(CC) $(CFLAGS) $(STD) $(OBJS) -o $(NAME)
 	@echo $(G)HI_THIS_IS_BRAIN compiled successfully! $(DEF_COLOR)
 
 clean:
